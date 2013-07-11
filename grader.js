@@ -94,7 +94,7 @@ if(require.main == module) {
           .option('-u, --url <url_loc>', 'Url to download')
           .parse(process.argv);
     if(program.url) {
-	console.log("Calling URL");
+//	console.log("Calling URL");
 
 	var tmp = rs.get(program.url).on('complete',function(result){
 	    if(result instanceof Error) {
@@ -115,7 +115,7 @@ if(require.main == module) {
 	});
 
     } else {
-	console.log("Calling HTML");
+//	console.log("Calling HTML");
 	var checkJson = checkHtmlFile(program.file, program.checks);
 	var outJson = JSON.stringify(checkJson, null, 4);
 	console.log(outJson);
